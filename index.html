@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KANGRO — Premium Running Vests & Hydration Packs</title>
+  <meta name="description" content="BUILT TO CARRY. BORN TO RUN. Discover KANGRO's elite trail running vests, race packs, and hydration gear designed for runners who push boundaries.">
+  <!-- Space Grotesk Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 0. Brand Intro Loader -->
+  <div id="site-intro" class="site-intro">
+    <div class="intro-loader-content">
+      <div class="intro-typewriter-row">
+        <span class="intro-typewriter-text" id="intro-typewriter"></span>
+        <span class="intro-typewriter-cursor"></span>
+      </div>
+      <div class="intro-progress-bar">
+        <div class="intro-progress-fill" id="intro-progress-fill"></div>
+      </div>
+      <span class="intro-tagline">BORN TO RUN</span>
+    </div>
+  </div>
+
+
+  <!-- 1. Top Announcement Bar -->
+  <div class="announcement-bar" id="announcement-bar">
+    <div class="announcement-track">
+      <span>Free shipping on orders over $150 · KANGRO Launch Drop — Shop Now</span>
+      <span class="desktop-only"> · Free shipping on orders over $150 · KANGRO Launch Drop — Shop Now</span>
+    </div>
+  </div>
+
+  <!-- 2. Sticky Navigation Bar -->
+  <header class="main-nav" id="main-nav">
+    <div class="nav-container">
+      <!-- Left: Logo -->
+      <a href="#" class="logo" id="logo-link">
+        <svg class="logo-icon" viewBox="0 0 100 100" fill="currentColor">
+          <path d="M20,10 H35 V90 H20 Z M38,45 L70,10 H85 L48,48 L88,90 H73 L38,52 Z" />
+        </svg>
+        <span class="logo-wordmark">KANGRO</span>
+      </a>
+
+      <!-- Center: Links -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#" class="nav-link active">New</a></li>
+          <li><a href="#" class="nav-link">Vests</a></li>
+          <li><a href="#" class="nav-link">Men</a></li>
+          <li><a href="#" class="nav-link">Women</a></li>
+          <li><a href="#" class="nav-link">Activities</a></li>
+          <li><a href="#" class="nav-link">Explore</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right: Search, Wishlist, Cart Icons -->
+      <div class="nav-utilities">
+        <button class="utility-btn" id="search-toggle" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="utility-btn" id="wishlist-toggle" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="utility-badge" id="wishlist-badge">0</span>
+        </button>
+        <button class="utility-btn" id="cart-toggle" aria-label="Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="utility-badge" id="cart-badge">0</span>
+        </button>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Dropdown / Fullscreen Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+      <div class="search-container">
+        <input type="text" placeholder="SEARCH GEAR..." id="search-input">
+        <button class="search-close-btn" id="search-close-btn">&times;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Hero Banner -->
+  <section class="hero-banner" id="hero-banner">
+    <div class="hero-image-wrapper">
+      <img src="hero_banner.png" alt="KANGRO Hero Runner" class="hero-img" loading="lazy">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <span class="hero-hook">Can you catch a kangaroo?</span>
+      <h1 class="hero-headline">BUILT TO CARRY.<br>BORN TO RUN.</h1>
+      <a href="#" class="btn btn-primary">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- 4. Shop by Activity -->
+  <section class="activity-section" id="activities">
+    <div class="section-container">
+      <h2 class="section-title">Shop By Activity</h2>
+      <div class="activity-scroll-row">
+        <!-- 1. Trail Running -->
+        <a href="#" class="activity-card">
+          <div class="activity-img-wrapper">
+            <img src="activity_trail_running.png" alt="Trail Running" loading="lazy">
+            <div class="activity-overlay"></div>
+          </div>
+          <span class="activity-label">Trail Running</span>
+        </a>
+        <!-- 2. Road Running -->
+        <a href="#" class="activity-card">
+          <div class="activity-img-wrapper">
+            <img src="activity_road_running.png" alt="Road Running" loading="lazy">
+            <div class="activity-overlay"></div>
+          </div>
+          <span class="activity-label">Road Running</span>
+        </a>
+        <!-- 3. Ultramarathon -->
+        <a href="#" class="activity-card">
+          <div class="activity-img-wrapper">
+            <img src="activity_ultramarathon.png" alt="Ultramarathon" loading="lazy">
+            <div class="activity-overlay"></div>
+          </div>
+          <span class="activity-label">Ultramarathon</span>
+        </a>
+        <!-- 4. Race Day -->
+        <a href="#" class="activity-card">
+          <div class="activity-img-wrapper">
+            <img src="activity_race_day.png" alt="Race Day" loading="lazy">
+            <div class="activity-overlay"></div>
+          </div>
+          <span class="activity-label">Race Day</span>
+        </a>
+        <!-- 5. Training -->
+        <a href="#" class="activity-card">
+          <div class="activity-img-wrapper">
+            <img src="activity_training.png" alt="Training" loading="lazy">
+            <div class="activity-overlay"></div>
+          </div>
+          <span class="activity-label">Training</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Featured Editorial Split -->
+  <section class="editorial-split" id="editorial">
+    <!-- Left Column -->
+    <div class="editorial-tile">
+      <div class="editorial-img-wrapper">
+        <img src="IMG-20260628-WA0038.jpg" alt="Trail Vest 8L — Women" class="editorial-img" loading="lazy">
+        <div class="editorial-overlay"></div>
+      </div>
+      <div class="editorial-content">
+        <h3 class="editorial-title">Trail Vest 8L — Women</h3>
+        <div class="editorial-ctas">
+          <a href="#" class="btn btn-secondary">Women</a>
+          <a href="#" class="btn btn-secondary">Men</a>
+        </div>
+      </div>
+    </div>
+    <!-- Right Column -->
+    <div class="editorial-tile">
+      <div class="editorial-img-wrapper">
+        <img src="IMG-20260628-WA0036.jpg" alt="Race Vest 5L — New Drop" class="editorial-img" loading="lazy">
+        <div class="editorial-overlay"></div>
+      </div>
+      <div class="editorial-content">
+        <h3 class="editorial-title">Race Vest 5L — New Drop</h3>
+        <div class="editorial-ctas">
+          <a href="#" class="btn btn-primary">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Best Sellers Carousel -->
+  <section class="best-sellers" id="best-sellers">
+    <div class="section-container">
+      <div class="carousel-header">
+        <h2 class="section-title">Best Sellers</h2>
+        <div class="carousel-controls">
+          <button class="control-btn" id="prev-slide" aria-label="Previous Slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="control-btn" id="next-slide" aria-label="Next Slide">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="carousel-track-container" id="carousel-track-container">
+        <div class="carousel-track" id="carousel-track">
+          <!-- Card 1: Kangro Trail 8 -->
+          <div class="product-card" data-id="trail-8">
+            <div class="product-img-wrapper">
+              <img src="product_trail_8.png" alt="Kangro Trail 8" class="product-img" loading="lazy">
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="product-tag badge">Best Seller</div>
+              <button class="quick-add-btn">Quick Add +</button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Trail Vest</span>
+              <h3 class="product-name">Kangro Trail 8</h3>
+              <span class="product-price">$185</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Kangro Race 5 -->
+          <div class="product-card" data-id="race-5">
+            <div class="product-img-wrapper">
+              <img src="product_race_5.png" alt="Kangro Race 5" class="product-img" loading="lazy">
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="product-tag badge">New</div>
+              <button class="quick-add-btn">Quick Add +</button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Race Vest</span>
+              <h3 class="product-name">Kangro Race 5</h3>
+              <span class="product-price">$155</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Kangro Hydro 12 -->
+          <div class="product-card" data-id="hydro-12">
+            <div class="product-img-wrapper">
+              <img src="product_hydro_12.png" alt="Kangro Hydro 12" class="product-img" loading="lazy">
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="product-tag badge">Best Seller</div>
+              <button class="quick-add-btn">Quick Add +</button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Hydration Pack</span>
+              <h3 class="product-name">Kangro Hydro 12</h3>
+              <span class="product-price">$210</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Kangro Sprint 3 -->
+          <div class="product-card" data-id="sprint-3">
+            <div class="product-img-wrapper">
+              <img src="product_sprint_3.png" alt="Kangro Sprint 3" class="product-img" loading="lazy">
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="product-tag badge">Ultralight</div>
+              <button class="quick-add-btn">Quick Add +</button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Sprint Vest</span>
+              <h3 class="product-name">Kangro Sprint 3</h3>
+              <span class="product-price">$129</span>
+            </div>
+          </div>
+
+          <!-- Card 5: Kangro Ultra 15 -->
+          <div class="product-card" data-id="ultra-15">
+            <div class="product-img-wrapper">
+              <img src="product_ultra_15.png" alt="Kangro Ultra 15" class="product-img" loading="lazy">
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="product-tag badge">Ultra Pack</div>
+              <button class="quick-add-btn">Quick Add +</button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Hydration Pack</span>
+              <h3 class="product-name">Kangro Ultra 15</h3>
+              <span class="product-price">$245</span>
+            </div>
+          </div>
+
+          <!-- Card 6: Kangro Speed Belt -->
+          <div class="product-card" data-id="speed-belt">
+            <div class="product-img-wrapper">
+              <img src="product_speed_belt.png" alt="Kangro Speed Belt" class="product-img" loading="lazy">
+              <button class="wishlist-btn" aria-label="Add to wishlist">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <div class="product-tag badge">Accessory</div>
+              <button class="quick-add-btn">Quick Add +</button>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Running Belt</span>
+              <h3 class="product-name">Kangro Speed Belt</h3>
+              <span class="product-price">$59</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Trending Now -->
+  <section class="trending-section" id="trending">
+    <div class="section-container">
+      <h2 class="section-title">Trending Now</h2>
+      <div class="trending-grid">
+        <!-- 1. Trail Vests -->
+        <a href="#" class="trending-card">
+          <div class="trending-img-wrapper">
+            <img src="trending_trail_vests.png" alt="Trail Vests" class="trending-img" loading="lazy">
+            <div class="trending-overlay"></div>
+          </div>
+          <span class="trending-label">Trail Vests</span>
+        </a>
+        <!-- 2. Race Day Gear -->
+        <a href="#" class="trending-card">
+          <div class="trending-img-wrapper">
+            <img src="trending_race_day.png" alt="Race Day Gear" class="trending-img" loading="lazy">
+            <div class="trending-overlay"></div>
+          </div>
+          <span class="trending-label">Race Day Gear</span>
+        </a>
+        <!-- 3. Hydration Packs -->
+        <a href="#" class="trending-card">
+          <div class="trending-img-wrapper">
+            <img src="trending_hydration_packs.png" alt="Hydration Packs" class="trending-img" loading="lazy">
+            <div class="trending-overlay"></div>
+          </div>
+          <span class="trending-label">Hydration Packs</span>
+        </a>
+        <!-- 4. Accessories -->
+        <a href="#" class="trending-card">
+          <div class="trending-img-wrapper">
+            <img src="trending_accessories.png" alt="Accessories" class="trending-img" loading="lazy">
+            <div class="trending-overlay"></div>
+          </div>
+          <span class="trending-label">Accessories</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Top Categories Grid -->
+  <section class="top-categories" id="top-categories">
+    <div class="section-container">
+      <h2 class="section-title">Top Categories</h2>
+      <div class="categories-grid">
+        <a href="#" class="category-link">Men's Trail Vests</a>
+        <a href="#" class="category-link">Women's Trail Vests</a>
+        <a href="#" class="category-link">Race Vests</a>
+        <a href="#" class="category-link">Hydration Packs</a>
+        <a href="#" class="category-link">Trail Accessories</a>
+        <a href="#" class="category-link">Running Belts</a>
+        <a href="#" class="category-link">Training Vests</a>
+        <a href="#" class="category-link">New Arrivals</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Trust Bar -->
+  <section class="trust-bar" id="trust-bar">
+    <div class="trust-row">
+      <a href="#" class="trust-item">
+        <span>Free Returns Within 30 Days</span>
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+    <div class="trust-row">
+      <a href="#" class="trust-item">
+        <span>Free Shipping for KANGRO+ Members</span>
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- 10. KANGRO+ Membership Block -->
+  <section class="membership-section" id="membership">
+    <div class="section-container">
+      <div class="membership-box">
+        <svg class="membership-logo" viewBox="0 0 100 100">
+          <path d="M20,10 H35 V90 H20 Z M38,45 L70,10 H85 L48,48 L88,90 H73 L38,52 Z" />
+        </svg>
+        <span class="membership-badge">KANGRO+</span>
+        <h2 class="membership-title">BECOME A MEMBER</h2>
+        <p class="membership-copy">Get free shipping on all orders, early access to limited edition launch drops, and exclusive invitations to community trail events.</p>
+        <div class="membership-ctas">
+          <a href="#" class="btn btn-primary">Sign in</a>
+          <a href="#" class="btn btn-secondary">Learn more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Footer -->
+  <footer class="main-footer" id="main-footer">
+    <div class="footer-container">
+      <!-- 5 Column Links -->
+      <div class="footer-links-grid">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Kangro</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Our Athletes</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Help Center</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Find a Store</a></li>
+            <li><a href="#">Size Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Legal</h4>
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Cookie Settings</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Sustainability</h4>
+          <ul>
+            <li><a href="#">Eco-Design</a></li>
+            <li><a href="#">Responsibility</a></li>
+            <li><a href="#">Repair Service</a></li>
+            <li><a href="#">Carbon Pledge</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Shipping</h4>
+          <ul>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="#">Shipping Rates</a></li>
+            <li><a href="#">KANGRO+ Shipping</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom: Socials, Copyright, Language -->
+      <div class="footer-bottom">
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="#" aria-label="TikTok" class="social-icon">
+            <!-- TikTok SVG -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+            </svg>
+          </a>
+          <a href="#" aria-label="YouTube" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+            </svg>
+          </a>
+        </div>
+        <div class="footer-copyright">
+          © 2026 Kangro — Born to Run. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer Overlay & Sidebar -->
+  <div class="drawer-overlay" id="cart-drawer-overlay"></div>
+  <div class="drawer" id="cart-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Your Cart (<span id="cart-drawer-count">0</span>)</h3>
+      <button class="drawer-close-btn" id="cart-drawer-close" aria-label="Close Cart">&times;</button>
+    </div>
+    
+    <div class="drawer-shipping-notice">
+      <span class="shipping-notice-text" id="shipping-notice-text">Spend $150 more for FREE shipping</span>
+      <div class="shipping-progress-bar">
+        <div class="shipping-progress-fill" id="shipping-progress-fill" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <div class="drawer-content" id="cart-drawer-items">
+      <!-- Dynamic cart items list -->
+      <div class="drawer-empty-state" id="cart-empty-state">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        <p>Your cart is empty.</p>
+        <button class="btn btn-secondary btn-sm" id="cart-continue-shopping" style="padding: 10px 20px; font-size: 0.8rem; min-width: auto; margin-top: 15px;">Shop All Vests</button>
+      </div>
+    </div>
+
+    <div class="drawer-footer" id="cart-drawer-footer">
+      <div class="drawer-summary-row">
+        <span>Subtotal</span>
+        <span class="drawer-summary-price" id="cart-subtotal">$0.00</span>
+      </div>
+      <p class="drawer-footer-note">Shipping & taxes calculated at checkout.</p>
+      <button class="btn btn-primary drawer-checkout-btn" style="width: 100%; padding: 18px 0; margin-top: 15px;">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- Wishlist Drawer Overlay & Sidebar -->
+  <div class="drawer-overlay" id="wishlist-drawer-overlay"></div>
+  <div class="drawer" id="wishlist-drawer" aria-hidden="true">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Your Wishlist (<span id="wishlist-drawer-count">0</span>)</h3>
+      <button class="drawer-close-btn" id="wishlist-drawer-close" aria-label="Close Wishlist">&times;</button>
+    </div>
+
+    <div class="drawer-content" id="wishlist-drawer-items">
+      <!-- Dynamic wishlist items list -->
+      <div class="drawer-empty-state" id="wishlist-empty-state">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+        <p>Your wishlist is empty.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
